@@ -1,7 +1,7 @@
-<div class="d-flex justify-content-around flex-wrap bg-light">
+<div class="parent bg-light">
     <% @cocktails.each do |cocktail| %>
-      <div class="card col-5 w-30 text-center my-3 mx-1 py-5 rounded-pill">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <div class="card text-center my-3 mx-1 py-5 rounded-pill">
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "text-secondary" %>
       </div>
     <% end %>
 </div>
