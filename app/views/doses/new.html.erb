@@ -1,9 +1,15 @@
+<div class="d-flex justify-content-center">
+  <div class="col-4">
+    <%= link_to 'Back to the cocktail', cocktail_path(@cocktail), class: 'btn btn-danger d-block text-center' %>
+  </div>
+</div>
+
 <%= simple_form_for [@cocktail, @dose] do |f| %>
 
   <%= f.input :description %>
   <%= f.association :ingredient %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-primary' %>
 
 <% end %>
 
-<%= link_to 'Back to the cocktail', cocktail_path(@cocktail) %>
+

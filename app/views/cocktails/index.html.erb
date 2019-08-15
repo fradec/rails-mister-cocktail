@@ -1,5 +1,8 @@
-<h2>Our cocktails</h2>
+<div class="d-flex justify-content-around flex-wrap bg-light">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card col-5 w-30 text-center my-3 mx-1 py-5 rounded-pill">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    <% end %>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-<% end %>
