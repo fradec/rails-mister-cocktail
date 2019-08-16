@@ -24,6 +24,9 @@
         <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary col-2" %>
       </div>
 
+      <%= cl_image_tag("vsu5gdpjerls2vmdjgsd",
+      width: 400, height: 300, crop: :fill) %>
+
       <%= yield %>
 
     </div>
