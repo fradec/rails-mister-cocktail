@@ -1,8 +1,8 @@
-<div class="parent bg-light">
+<div class="parent bg-transparent">
     <% @cocktails.each do |cocktail| %>
-      <div class="card text-center my-3 mx-1 py-5 rounded-pill"
-        style="background-image: url('<%= cl_image_path cocktail.photo %>'); background-clip: padding-box; background-size: cover">
-        <%= link_to cocktail.name, cocktail_path(cocktail), class: "text-secondary" %>
+      <div class="card text-center my-3 mx-1 py-5 rounded-pill text-uppercase"
+        style="background-image: url('<%= cl_image_path cocktail.photo %>'); background-clip: padding-box; background-size: cover; font-size: 60px; text-shadow: 1px 1px black">
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "text-white" %>
       </div>
     <% end %>
 </div>
