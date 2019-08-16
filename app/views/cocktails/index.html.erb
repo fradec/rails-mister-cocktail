@@ -1,8 +1,10 @@
 <div class="parent bg-light">
     <% @cocktails.each do |cocktail| %>
-      <div class="card text-center my-3 mx-1 py-5 rounded-pill">
+      <div class="card text-center my-3 mx-1 py-5 rounded-pill"
+        style="background-image: url('<%= cl_image_path cocktail.photo %>')">
         <%= link_to cocktail.name, cocktail_path(cocktail), class: "text-secondary" %>
       </div>
     <% end %>
 </div>
+
 
